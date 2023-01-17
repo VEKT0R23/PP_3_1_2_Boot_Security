@@ -52,7 +52,6 @@ public class AdminController {
 
     @GetMapping(value = "/{id}/edit")
     public String getUpdatePage(@PathVariable("id") Long id, Model model) {
-//        List<Role> roles = roleService.getRolesList();
         model.addAttribute("users", userService.getUserById(id));
         model.addAttribute("roles", roleService.getRolesList());
         return "edit";
