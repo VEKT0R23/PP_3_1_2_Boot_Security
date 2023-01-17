@@ -2,7 +2,6 @@ package ru.kata.spring.boot_security.demo.models;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.util.*;
@@ -128,7 +127,8 @@ public class User implements UserDetails {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User user)) return false;
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
         return Objects.equals(id, user.id) && Objects.equals(username, user.username) &&
                 Objects.equals(age, user.age) && Objects.equals(password, user.password) &&
                 Objects.equals(roles, user.roles);
