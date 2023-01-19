@@ -18,7 +18,7 @@ public class InsertData {
     @Autowired
     public InsertData(UserService userService) {
         this.userService = userService;
-            }
+    }
 
     @PostConstruct
     public void insertData() {

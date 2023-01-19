@@ -9,17 +9,17 @@ import java.util.List;
 
 public interface UserService extends UserDetailsService {
 
-    List<User> getAllUsers();
+    List<User> getAllUsers ();
 
-    User getUserById(Long id);
+    User getUserById (Long id);
 
-    User getUserByName(String username);
+    User getUserByName (String username);
 
-    void addUser(User user);
+    void addUser (User user);
 
-    void updateUser(Long id, User user);
+    void updateUser (Long id, User user);
 
-    void deleteUserById(Long id);
+    void deleteUserById (Long id);
 
     Collection<? extends GrantedAuthority> getAuthorities(Collection<Role> roles);
 }
